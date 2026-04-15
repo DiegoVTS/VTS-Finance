@@ -1,3 +1,7 @@
+Para baixar: clique com o botão direito na página → "Salvar como..." → salve como vts-finance.html
+
+Ou copie o código completo abaixo:
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -248,7 +252,6 @@
       overflow: hidden;
     }
 
-    /* Glow orbs */
     #hero::before {
       content: '';
       position: absolute;
@@ -354,7 +357,6 @@
     }
     .hero-trust-item svg { color: var(--accent); }
 
-    /* Dashboard Mockup */
     .hero-visual {
       display: flex;
       justify-content: center;
@@ -383,7 +385,6 @@
       box-shadow: 0 32px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(16,185,129,0.08);
     }
 
-    /* Dashboard SVG content */
     .dash-header {
       display: flex;
       justify-content: space-between;
@@ -406,9 +407,7 @@
       border-radius: 20px;
     }
 
-    .dash-balance {
-      margin-bottom: 20px;
-    }
+    .dash-balance { margin-bottom: 20px; }
     .dash-balance-label { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 4px; }
     .dash-balance-val {
       font-family: 'Outfit', sans-serif;
@@ -445,7 +444,6 @@
     .up { color: #10b981; }
     .down { color: #f87171; }
 
-    /* Mini bar chart */
     .dash-chart { margin-bottom: 16px; }
     .dash-chart-label { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 10px; }
     .chart-bars {
@@ -469,11 +467,7 @@
       border-radius: 4px 4px 0 0;
     }
 
-    .dash-cats {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+    .dash-cats { display: flex; flex-direction: column; gap: 8px; }
     .dash-cat {
       display: flex;
       align-items: center;
@@ -577,7 +571,7 @@
       gap: 20px;
     }
     @media (min-width: 600px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
 
     .price-card {
       background: var(--bg);
@@ -755,7 +749,6 @@
     }
     .footer-copy { color: var(--text-muted); font-size: 0.85rem; }
 
-    /* ─── SCROLLBAR ─────────────────────────────────────────────── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 6px; }
@@ -764,10 +757,9 @@
 <body>
 
 <!-- ═══════════════════ NAVBAR ═══════════════════ -->
-<nav data-testid="navbar">
+<nav>
   <div class="container nav-inner">
-    <a href="#hero" class="nav-logo" data-testid="nav-logo">
-      <!-- Bar chart icon -->
+    <a href="#hero" class="nav-logo">
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
         <rect x="3" y="16" width="5" height="9" rx="2" fill="#10b981"/>
         <rect x="11" y="10" width="5" height="15" rx="2" fill="#10b981" opacity="0.8"/>
@@ -776,22 +768,22 @@
       <span>VTS Finance</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#features" data-testid="nav-link-features">Funcionalidades</a></li>
-      <li><a href="#pricing" data-testid="nav-link-pricing">Planos</a></li>
-      <li><a href="#faq" data-testid="nav-link-faq">FAQ</a></li>
+      <li><a href="#features">Funcionalidades</a></li>
+      <li><a href="#pricing">Planos</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="#pricing" data-testid="nav-cta">Ver planos</a>
+      <a href="#pricing">Ver planos</a>
     </div>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" data-testid="hamburger-btn">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="mobile-menu" id="mobileMenu" data-testid="mobile-menu">
-    <a href="#features" data-testid="mobile-link-features">Funcionalidades</a>
-    <a href="#pricing" data-testid="mobile-link-pricing">Planos</a>
-    <a href="#faq" data-testid="mobile-link-faq">FAQ</a>
-    <a href="#pricing" data-testid="mobile-link-cta" style="color: var(--accent); font-weight: 700;">Ver planos</a>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features">Funcionalidades</a>
+    <a href="#pricing">Planos</a>
+    <a href="#faq">FAQ</a>
+    <a href="#pricing" style="color: var(--accent); font-weight: 700;">Ver planos</a>
   </div>
 </nav>
 
@@ -799,7 +791,6 @@
 <section id="hero">
   <div class="container">
     <div class="hero-inner">
-      <!-- Content -->
       <div class="hero-content">
         <div class="hero-badge fade-up">
           <span class="dot"></span>
@@ -814,7 +805,7 @@
           Simples, seguro e acessível de qualquer dispositivo.
         </p>
         <div class="hero-actions fade-up delay-3">
-          <a href="#pricing" class="btn-primary" data-testid="hero-cta">
+          <a href="#pricing" class="btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             Ver planos
           </a>
@@ -838,7 +829,7 @@
       <!-- Dashboard Mockup -->
       <div class="hero-visual fade-up delay-2">
         <div class="mockup-wrapper">
-          <div class="mockup-card" data-testid="dashboard-mockup">
+          <div class="mockup-card">
             <div class="dash-header">
               <div>
                 <div class="dash-title">Painel Financeiro</div>
@@ -846,13 +837,11 @@
               </div>
               <div class="dash-badge">+12,4%</div>
             </div>
-
             <div class="dash-balance">
               <div class="dash-balance-label">Saldo disponível</div>
               <div class="dash-balance-val">R$ 12.847<span style="font-size:1rem;color:var(--text-muted)">,50</span></div>
               <div class="dash-balance-change">&#9650; R$ 1.430 este mês</div>
             </div>
-
             <div class="dash-stats">
               <div class="dash-stat">
                 <div class="dash-stat-label">Receitas</div>
@@ -865,7 +854,6 @@
                 <div class="dash-stat-sub down">&#9660; 3%</div>
               </div>
             </div>
-
             <div class="dash-chart">
               <div class="dash-chart-label">Últimos 7 meses</div>
               <div class="chart-bars">
@@ -878,7 +866,6 @@
                 <div class="chart-bar" style="background:rgba(16,185,129,0.35)"><div class="fill" style="height:100%"></div></div>
               </div>
             </div>
-
             <div class="dash-cats">
               <div class="dash-cat">
                 <span class="dash-cat-name">Moradia</span>
@@ -911,12 +898,9 @@
       <h2 class="section-title">Tudo que você precisa para<br><span class="accent-text">suas finanças</span></h2>
       <p class="section-sub">Ferramentas poderosas pensadas para simplificar a gestão do seu dinheiro no dia a dia.</p>
     </div>
-
     <div class="features-grid">
-      <!-- Card 1 -->
-      <div class="feat-card fade-up" data-testid="feature-card-1">
+      <div class="feat-card fade-up">
         <div class="feat-icon">
-          <!-- Grid / dashboard icon -->
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
             <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
@@ -925,11 +909,8 @@
         <div class="feat-title">Dashboard completo</div>
         <p class="feat-desc">Visualize todas as suas contas, cartões e investimentos em um único painel intuitivo e atualizado em tempo real.</p>
       </div>
-
-      <!-- Card 2 -->
-      <div class="feat-card fade-up delay-1" data-testid="feature-card-2">
+      <div class="feat-card fade-up delay-1">
         <div class="feat-icon">
-          <!-- Wallet icon -->
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/>
             <circle cx="17.5" cy="16" r="1"/>
@@ -938,11 +919,8 @@
         <div class="feat-title">Controle de gastos</div>
         <p class="feat-desc">Categorize despesas automaticamente e saiba exatamente para onde vai cada real do seu orçamento.</p>
       </div>
-
-      <!-- Card 3 -->
-      <div class="feat-card fade-up delay-2" data-testid="feature-card-3">
+      <div class="feat-card fade-up delay-2">
         <div class="feat-icon">
-          <!-- Bar chart icon -->
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
             <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
@@ -951,11 +929,8 @@
         <div class="feat-title">Relatórios mensais e anuais</div>
         <p class="feat-desc">Analise sua evolução financeira com relatórios detalhados por período, categoria e tipo de transação.</p>
       </div>
-
-      <!-- Card 4 -->
-      <div class="feat-card fade-up delay-3" data-testid="feature-card-4">
+      <div class="feat-card fade-up delay-3">
         <div class="feat-icon">
-          <!-- Shield / cloud icon -->
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
           </svg>
@@ -975,124 +950,52 @@
       <h2 class="section-title">Escolha o plano <span class="accent-text">ideal para você</span></h2>
       <p class="section-sub">Preços transparentes, sem taxas ocultas. Cancele quando quiser.</p>
     </div>
-
     <div class="pricing-grid">
 
       <!-- Mensal -->
-      <div class="price-card fade-up" data-testid="pricing-card-mensal">
+      <div class="price-card fade-up">
         <div class="price-tier">Mensal</div>
         <div class="price-amount"><sup>R$</sup>9<span style="font-size:1.2rem">,99</span></div>
         <div class="price-period">por mês</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Dashboard completo
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Controle de gastos
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Relatórios mensais
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Dados seguros na nuvem
-          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dashboard completo</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Controle de gastos</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Relatórios mensais</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dados seguros na nuvem</li>
         </ul>
-        <a href="https://pay.kiwify.com.br/KRpO7be" target="_blank" rel="noopener" class="btn-outline" data-testid="pricing-cta-mensal">
-          Assinar agora
-        </a>
+        <a href="https://pay.kiwify.com.br/KRpO7be" target="_blank" rel="noopener" class="btn-outline">Assinar agora</a>
       </div>
 
       <!-- Anual — Popular -->
-      <div class="price-card popular fade-up delay-1" data-testid="pricing-card-anual">
+      <div class="price-card popular fade-up delay-1">
         <div class="popular-badge">Mais popular</div>
         <div class="price-tier">Anual</div>
         <div class="price-amount"><sup>R$</sup>99<span style="font-size:1.2rem">,99</span></div>
         <div class="price-period">por ano &mdash; <strong style="color:var(--accent)">economize 17%</strong></div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Tudo do plano Mensal
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Relatórios mensais e anuais
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Suporte prioritário
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Acesso antecipado a novidades
-          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tudo do plano Mensal</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Relatórios mensais e anuais</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suporte prioritário</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Acesso antecipado a novidades</li>
         </ul>
-        <a href="https://pay.kiwify.com.br/hs3uc9Z" target="_blank" rel="noopener" class="btn-solid" data-testid="pricing-cta-anual">
-          Assinar agora
-        </a>
+        <a href="https://pay.kiwify.com.br/hs3uc9Z" target="_blank" rel="noopener" class="btn-solid">Assinar agora</a>
       </div>
 
       <!-- 4 Anos -->
-      <div class="price-card fade-up delay-2" data-testid="pricing-card-4anos">
+      <div class="price-card fade-up delay-2">
         <div class="price-tier">4 Anos</div>
         <div class="price-amount"><sup>R$</sup>299<span style="font-size:1.2rem">,99</span></div>
         <div class="price-period">acesso por 4 anos</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Tudo do plano Anual
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Exportação avançada
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Backup automático
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Economia máxima
-          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tudo do plano Anual</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Exportação avançada</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Backup automático</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Economia máxima</li>
         </ul>
-        <a href="https://pay.kiwify.com.br/tJKTirV" target="_blank" rel="noopener" class="btn-outline" data-testid="pricing-cta-4anos">
-          Assinar agora
-        </a>
-      </div>
-
-      <!-- Vitalício -->
-      <div class="price-card fade-up delay-3" data-testid="pricing-card-vitalicio">
-        <div class="price-tier">Vitalício</div>
-        <div class="price-amount"><sup>R$</sup>499<span style="font-size:1.2rem">,99</span></div>
-        <div class="price-period">pagamento único</div>
-        <div class="price-divider"></div>
-        <ul class="price-features">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Acesso para sempre
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Todas as funcionalidades
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Atualizações vitalícias
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Suporte VIP
-          </li>
-        </ul>
-        <a href="https://pay.kiwify.com.br/RYRkc8X" target="_blank" rel="noopener" class="btn-outline" data-testid="pricing-cta-vitalicio">
-          Assinar agora
-        </a>
+        <a href="https://pay.kiwify.com.br/tJKTirV" target="_blank" rel="noopener" class="btn-outline">Assinar agora</a>
       </div>
 
     </div>
@@ -1107,76 +1010,65 @@
       <h2 class="section-title">Perguntas <span class="accent-text">frequentes</span></h2>
       <p class="section-sub">Encontre respostas para as dúvidas mais comuns sobre o VTS Finance.</p>
     </div>
+    <div class="faq-list">
 
-    <div class="faq-list" data-testid="faq-list">
-
-      <div class="faq-item fade-up" data-testid="faq-item-1">
-        <button class="faq-toggle" data-testid="faq-toggle-1" aria-expanded="false">
+      <div class="faq-item fade-up">
+        <button class="faq-toggle" aria-expanded="false">
           <span>Como funciona após o pagamento?</span>
           <div class="faq-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
         </button>
-        <div class="faq-answer" data-testid="faq-answer-1">
-          <div class="faq-answer-inner">
-            Após a confirmação do pagamento, você recebe imediatamente um e-mail com as instruções de acesso. Em poucos minutos você já pode começar a usar o VTS Finance em qualquer dispositivo, sem complicações.
-          </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Após a confirmação do pagamento, você recebe imediatamente um e-mail com as instruções de acesso. Em poucos minutos você já pode começar a usar o VTS Finance em qualquer dispositivo, sem complicações.</div>
         </div>
       </div>
 
-      <div class="faq-item fade-up delay-1" data-testid="faq-item-2">
-        <button class="faq-toggle" data-testid="faq-toggle-2" aria-expanded="false">
+      <div class="faq-item fade-up delay-1">
+        <button class="faq-toggle" aria-expanded="false">
           <span>Funciona no celular?</span>
           <div class="faq-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
         </button>
-        <div class="faq-answer" data-testid="faq-answer-2">
-          <div class="faq-answer-inner">
-            Sim! O VTS Finance é totalmente responsivo e funciona perfeitamente em smartphones, tablets e computadores. Sua conta sincroniza automaticamente entre todos os dispositivos em tempo real.
-          </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sim! O VTS Finance é totalmente responsivo e funciona perfeitamente em smartphones, tablets e computadores. Sua conta sincroniza automaticamente entre todos os dispositivos em tempo real.</div>
         </div>
       </div>
 
-      <div class="faq-item fade-up delay-2" data-testid="faq-item-3">
-        <button class="faq-toggle" data-testid="faq-toggle-3" aria-expanded="false">
+      <div class="faq-item fade-up delay-2">
+        <button class="faq-toggle" aria-expanded="false">
           <span>Posso cancelar quando quiser?</span>
           <div class="faq-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
         </button>
-        <div class="faq-answer" data-testid="faq-answer-3">
-          <div class="faq-answer-inner">
-            Sim, nos planos com recorrência (Mensal e Anual) você pode cancelar a qualquer momento diretamente na plataforma, sem burocracia, sem multas e sem taxas de cancelamento.
-          </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sim, nos planos com recorrência (Mensal e Anual) você pode cancelar a qualquer momento diretamente na plataforma, sem burocracia, sem multas e sem taxas de cancelamento.</div>
         </div>
       </div>
 
-      <div class="faq-item fade-up delay-3" data-testid="faq-item-4">
-        <button class="faq-toggle" data-testid="faq-toggle-4" aria-expanded="false">
+      <div class="faq-item fade-up delay-3">
+        <button class="faq-toggle" aria-expanded="false">
           <span>Meus dados ficam seguros?</span>
           <div class="faq-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
         </button>
-        <div class="faq-answer" data-testid="faq-answer-4">
-          <div class="faq-answer-inner">
-            Absolutamente. Utilizamos criptografia de ponta a ponta (AES-256) e seguimos rigorosos padrões de segurança bancária. Seus dados são armazenados na nuvem com backups automáticos e nunca são vendidos a terceiros.
-          </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Absolutamente. Utilizamos criptografia de ponta a ponta (AES-256) e seguimos rigorosos padrões de segurança bancária. Seus dados são armazenados na nuvem com backups automáticos e nunca são vendidos a terceiros.</div>
         </div>
       </div>
 
-      <div class="faq-item fade-up delay-4" data-testid="faq-item-5">
-        <button class="faq-toggle" data-testid="faq-toggle-5" aria-expanded="false">
+      <div class="faq-item fade-up delay-4">
+        <button class="faq-toggle" aria-expanded="false">
           <span>Tem versão gratuita?</span>
           <div class="faq-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
         </button>
-        <div class="faq-answer" data-testid="faq-answer-5">
-          <div class="faq-answer-inner">
-            No momento não oferecemos um plano gratuito, mas nosso plano Mensal por R$9,99 tem um custo acessível para qualquer pessoa. Você pode cancelar a qualquer hora se não estiver satisfeito.
-          </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No momento não oferecemos um plano gratuito, mas nosso plano Mensal por R$9,99 tem um custo acessível para qualquer pessoa. Você pode cancelar a qualquer hora se não estiver satisfeito.</div>
         </div>
       </div>
 
@@ -1185,9 +1077,9 @@
 </section>
 
 <!-- ═══════════════════ FOOTER ═══════════════════ -->
-<footer data-testid="footer">
+<footer>
   <div class="container footer-inner">
-    <a href="#hero" class="footer-logo" data-testid="footer-logo">
+    <a href="#hero" class="footer-logo">
       <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
         <rect x="3" y="16" width="5" height="9" rx="2" fill="#10b981"/>
         <rect x="11" y="10" width="5" height="15" rx="2" fill="#10b981" opacity="0.8"/>
@@ -1195,11 +1087,10 @@
       </svg>
       <span>VTS Finance</span>
     </a>
-    <p class="footer-copy" data-testid="footer-copy">&copy; 2026 VTS Finance. Todos os direitos reservados.</p>
+    <p class="footer-copy">&copy; 2026 VTS Finance. Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<!-- ═══════════════════ JS ═══════════════════ -->
 <script>
   // ── Hamburger menu ──
   const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -1210,7 +1101,6 @@
     mobileMenu.classList.toggle('open');
   });
 
-  // Close mobile menu on link click
   mobileMenu.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       hamburgerBtn.classList.remove('open');
@@ -1224,13 +1114,11 @@
       var item = this.closest('.faq-item');
       var isActive = item.classList.contains('active');
 
-      // Close all
       document.querySelectorAll('.faq-item').forEach(function (i) {
         i.classList.remove('active');
         i.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
       });
 
-      // Open clicked if it wasn't active
       if (!isActive) {
         item.classList.add('active');
         this.setAttribute('aria-expanded', 'true');
@@ -1238,7 +1126,7 @@
     });
   });
 
-  // ── Fade-in on scroll (IntersectionObserver) ──
+  // ── Fade-in on scroll ──
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
@@ -1252,7 +1140,7 @@
     observer.observe(el);
   });
 
-  // ── Smooth scroll for anchor links ──
+  // ── Smooth scroll ──
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var targetId = this.getAttribute('href');
@@ -1268,4 +1156,3 @@
 </script>
 </body>
 </html>
-
