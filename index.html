@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VTS Finance — Pare de perder dinheiro sem perceber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./index_files/css2" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    /* ─── RESET & VARIABLES ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0f1117;
+      --surface:      #181b25;
+      --surface-2:    #1e222d;
+      --accent:       #10b981;
+      --accent-hover: #059669;
+      --accent-glow:  rgba(16,185,129,0.18);
+      --danger:       #f87171;
+      --text:         #ffffff;
+      --text-muted:   #94a3b8;
+      --border:       rgba(255,255,255,0.08);
+      --radius:       16px;
+      --max-w:        1200px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── LAYOUT ────────────────────────────────────────────────── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    section { padding: 96px 24px; }
+    .surface-bg { background: var(--surface); }
+
+    /* ─── TYPOGRAPHY UTILITIES ───────────────────────────────────── */
+    .accent-text {
+      background: linear-gradient(135deg, #10b981, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(16,185,129,0.1);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(16,185,129,0.2);
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .section-head { text-align: center; margin-bottom: 56px; }
+
+    /* ─── BUTTONS ───────────────────────────────────────────────── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 15px 34px;
+      border-radius: 50px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(16,185,129,0.35);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-muted);
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .btn-ghost:hover {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--accent);
+      padding: 13px 28px;
+      border-radius: 50px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1.5px solid var(--accent);
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s;
+      width: 100%;
+    }
+    .btn-outline:hover { background: var(--accent-glow); transform: translateY(-2px); }
+
+    .btn-solid {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      width: 100%;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+    .btn-solid:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(16,185,129,0.35);
+    }
+
+    /* ─── FADE-IN ANIMATION ─────────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up.delay-1 { transition-delay: 0.1s; }
+    .fade-up.delay-2 { transition-delay: 0.2s; }
+    .fade-up.delay-3 { transition-delay: 0.3s; }
+    .fade-up.delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAVBAR ────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(15,17,23,0.88);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+    .nav-logo span {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.3px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 7px 13px;
+      border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--surface-2); }
+
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .nav-cta-btn {
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 22px;
+      border-radius: 50px;
+      transition: background 0.25s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border: none;
+      background: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(15,17,23,0.98);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--border);
+      padding: 16px 24px 24px;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-menu .mob-cta { color: var(--accent); font-weight: 700; }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .nav-right .nav-cta-btn { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ─── HERO ──────────────────────────────────────────────────── */
+    #hero {
+      padding: 140px 24px 96px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 560px;
+      background: radial-gradient(ellipse at center, rgba(16,185,129,0.13) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(ellipse at center, rgba(16,185,129,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16,185,129,0.1);
+      border: 1px solid rgba(16,185,129,0.3);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+
+    .hero-h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+    .trust-item svg { color: var(--accent); flex-shrink: 0; }
+
+    /* ─── PROBLEMA ──────────────────────────────────────────────── */
+    #problema {
+      background: var(--surface);
+      text-align: center;
+    }
+    .problema-text {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .problema-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 500px;
+      margin: 0 auto 28px;
+      text-align: left;
+    }
+    .problema-bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(248,113,113,0.05);
+      border: 1px solid rgba(248,113,113,0.12);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .problema-bullet .xicon {
+      width: 20px; height: 20px;
+      background: rgba(248,113,113,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--danger);
+      margin-top: 1px;
+    }
+    .problema-bullet span {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .problema-closing {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ─── SOLUÇÃO (FEATURES) ─────────────────────────────────────── */
+    #features { text-align: center; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 600px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .features-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .feat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: left;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .feat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(16,185,129,0.15);
+      border-color: rgba(16,185,129,0.2);
+    }
+    .feat-icon {
+      width: 48px; height: 48px;
+      background: rgba(16,185,129,0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+    .feat-title { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; }
+    .feat-desc { color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; }
+
+    /* ─── COMO FUNCIONA ──────────────────────────────────────────── */
+    #como-funciona { background: var(--surface); text-align: center; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    @media (min-width: 700px) {
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+      }
+    }
+    .step-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+      position: relative;
+    }
+    @media (min-width: 700px) {
+      .step-card:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 24px;
+        right: -4px;
+        width: 50%;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(16,185,129,0.4), transparent);
+      }
+      .step-card:not(:first-child)::before {
+        content: '';
+        position: absolute;
+        top: 24px;
+        left: -4px;
+        width: 50%;
+        height: 1px;
+        background: linear-gradient(270deg, rgba(16,185,129,0.4), transparent);
+      }
+    }
+    .step-num {
+      width: 48px; height: 48px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 18px;
+      flex-shrink: 0;
+      box-shadow: 0 0 24px rgba(16,185,129,0.3);
+    }
+    .step-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .step-desc { color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; }
+    .steps-extra {
+      margin-top: 36px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* ─── PRODUTO ───────────────────────────────────────────────── */
+    #produto { text-align: center; }
+    .produto-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+      text-align: left;
+    }
+    @media (min-width: 900px) {
+      .produto-inner { grid-template-columns: 1fr 1fr; gap: 64px; }
+    }
+    .produto-content h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 24px;
+    }
+    .produto-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .produto-bullet {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.95rem;
+    }
+    .check-circle {
+      width: 28px; height: 28px;
+      background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    /* Dashboard mockup (reused from hero) */
+    .mockup-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .mockup-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(ellipse at 50% 50%, rgba(16,185,129,0.18) 0%, transparent 65%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .mockup-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      position: relative;
+      box-shadow: 0 32px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(16,185,129,0.08);
+    }
+    .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .dash-title { font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text); }
+    .dash-date { font-size: 0.72rem; color: var(--text-muted); }
+    .dash-badge { background: rgba(16,185,129,0.15); color: var(--accent); font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+    .dash-balance { margin-bottom: 20px; }
+    .dash-balance-label { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 4px; }
+    .dash-balance-val { font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--text); }
+    .dash-balance-change { font-size: 0.75rem; color: var(--accent); font-weight: 600; margin-top: 2px; }
+    .dash-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+    .dash-stat { background: var(--surface-2); border-radius: 12px; padding: 12px 14px; }
+    .dash-stat-label { font-size: 0.68rem; color: var(--text-muted); margin-bottom: 6px; }
+    .dash-stat-val { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); }
+    .dash-stat-sub { font-size: 0.65rem; margin-top: 2px; }
+    .up { color: #10b981; } .down { color: #f87171; }
+    .dash-chart { margin-bottom: 16px; }
+    .dash-chart-label { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 10px; }
+    .chart-bars { display: flex; align-items: flex-end; gap: 6px; height: 60px; }
+    .chart-bar { flex: 1; height: 100%; border-radius: 4px 4px 0 0; background: rgba(16,185,129,0.15); position: relative; overflow: hidden; }
+    .chart-bar .fill { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(180deg, #10b981, #059669); border-radius: 4px 4px 0 0; }
+    .dash-cats { display: flex; flex-direction: column; gap: 8px; }
+    .dash-cat { display: flex; align-items: center; justify-content: space-between; }
+    .dash-cat-name { font-size: 0.72rem; color: var(--text-muted); }
+    .dash-cat-bar-wrap { flex: 1; margin: 0 10px; height: 4px; background: var(--border); border-radius: 4px; overflow: hidden; }
+    .dash-cat-bar { height: 100%; background: linear-gradient(90deg, #10b981, #34d399); border-radius: 4px; }
+    .dash-cat-val { font-size: 0.68rem; color: var(--text); font-weight: 600; }
+
+    /* ─── TRANSFORMAÇÃO ──────────────────────────────────────────── */
+    #transformacao { background: var(--surface); text-align: center; }
+    .transform-wrapper {
+      display: flex;
+      align-items: stretch;
+      gap: 16px;
+      max-width: 720px;
+      margin: 0 auto;
+      flex-direction: column;
+    }
+    @media (min-width: 600px) {
+      .transform-wrapper { flex-direction: row; align-items: center; }
+    }
+    .transform-col {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: left;
+    }
+    .transform-col.before { border-color: rgba(248,113,113,0.18); }
+    .transform-col.after  { border-color: rgba(16,185,129,0.25); }
+
+    .transform-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .before .transform-label { color: var(--danger); }
+    .after  .transform-label { color: var(--accent); }
+    .label-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .before .label-dot { background: var(--danger); }
+    .after  .label-dot { background: var(--accent); }
+
+    .transform-items { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .transform-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+    .before .transform-item { color: var(--text-muted); }
+    .after  .transform-item { color: var(--text); }
+    .ti-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .before .ti-dot { background: var(--danger); opacity: 0.6; }
+    .after  .ti-dot { background: var(--accent); }
+
+    .transform-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px; height: 42px;
+      min-width: 42px;
+      background: rgba(16,185,129,0.1);
+      border: 1px solid rgba(16,185,129,0.2);
+      border-radius: 50%;
+      color: var(--accent);
+      margin: 0 auto;
+    }
+
+    /* ─── PRICING ───────────────────────────────────────────────── */
+    #pricing { background: var(--bg); text-align: center; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 600px)  { .pricing-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      text-align: left;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .price-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+    .price-card.popular {
+      border-color: var(--accent);
+      border-width: 2px;
+      box-shadow: 0 0 40px rgba(16,185,129,0.12);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -13px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 5px 16px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+    .price-tier { font-family: 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px; }
+    .price-tagline { font-size: 0.82rem; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+    .price-amount { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 4px; }
+    .price-amount sup { font-size: 1rem; font-weight: 700; vertical-align: top; margin-top: 6px; }
+    .price-period { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 20px; }
+    .price-divider { height: 1px; background: var(--border); margin-bottom: 20px; }
+    .price-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; flex: 1; }
+    .price-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.875rem; color: var(--text-muted); line-height: 1.4; }
+    .price-features li svg { flex-shrink: 0; margin-top: 1px; color: var(--accent); }
+
+    /* ─── OBJEÇÕES ──────────────────────────────────────────────── */
+    #objecoes { background: var(--surface); text-align: center; }
+    .objecoes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    @media (min-width: 600px) { .objecoes-grid { grid-template-columns: 1fr 1fr; } }
+    .objecao-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      text-align: left;
+      transition: border-color 0.2s;
+    }
+    .objecao-card:hover { border-color: rgba(16,185,129,0.2); }
+    .objecao-icon {
+      width: 30px; height: 30px;
+      background: rgba(16,185,129,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+    .objecao-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ─── CTA FINAL ─────────────────────────────────────────────── */
+    #cta-final {
+      background: var(--bg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta-final::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse at center, rgba(16,185,129,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-final-inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+    .cta-final-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 16px;
+      line-height: 1.18;
+    }
+    .cta-final-sub { color: var(--text-muted); font-size: 1rem; margin-bottom: 36px; line-height: 1.7; }
+
+    /* ─── FAQ ───────────────────────────────────────────────────── */
+    #faq { background: var(--surface); text-align: center; }
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+    .faq-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item.active { border-color: rgba(16,185,129,0.3); }
+    .faq-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 22px;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.4;
+      transition: background 0.2s;
+    }
+    .faq-toggle:hover { background: var(--surface-2); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.3s;
+    }
+    .faq-item.active .faq-icon { background: var(--accent-glow); transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-item.active .faq-answer { max-height: 200px; }
+    .faq-answer-inner { padding: 0 22px 20px; color: var(--text-muted); font-size: 0.88rem; line-height: 1.7; }
+
+    /* ─── FOOTER ────────────────────────────────────────────────── */
+    footer { padding: 40px 24px; border-top: 1px solid var(--border); background: var(--bg); }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+    @media (min-width: 600px) {
+      .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+    .footer-logo span { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.1rem; }
+    .footer-copy { color: var(--text-muted); font-size: 0.85rem; }
+
+    /* ─── SCROLLBAR ─────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 6px; }
+  </style>
+<style type="text/css">:root img[width="728"][height="90"], :root [href="https://adstub.net/cina777/"], :root [href="https://adstub.net/arab777/"], :root [href="https://adstub.net/ratu89/"], :root [href="https://adstub.net/judi89/"], :root [href^="//mage98rquewz.com/"], :root [href^="//x4pollyxxpush.com/"], :root span[id^="ezoic-pub-ad-placeholder-"], :root ins.adsbygoogle[data-ad-slot], :root ins.adsbygoogle[data-ad-client], :root img[src^="https://s-img.adskeeper.com/"], :root guj-ad, :root gpt-ad, :root div[ow-ad-unit-wrapper], :root div[id^="zergnet-widget"], :root div[id^="vuukle-ad-"], :root div[id^="taboola-stream-"], :root div[id^="sticky_ad_"], :root div[id^="st"][style^="z-index: 999999999;"], :root div[id^="rc-widget-"], :root div[id^="mrec-leaderboard-"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="dfp-ad-"], :root div[id^="crt-"][style], :root div[id^="apn_native_ad_slot_"], :root div[id^="adspot-"], :root div[id^="adrotate_widgets-"], :root ps-connatix-module, :root div[id^="ad_position_"], :root div[id^="ad-div-"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root [href="https://adstub.net/rusia777/"], :root div[data-id-advertdfpconf], :root div[data-dfp-id], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-alias="300x250 Ad 2"], :root div[data-adunit-path], :root div[data-adname], :root div[data-ad-placeholder], :root a[href^="https://osfultrbriolenai.info/"], :root div[class^="Adstyled__AdWrapper-"], :root a[href^="https://go.xlviiirdr.com"], :root div[class$="-adlabel"], :root display-ads, :root a[href^="https://go.grinsbest.com/"], :root citrus-ad-wrapper, :root a[href^="https://s.zlinkd.com/"], :root bottomadblock, :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root div[id^="google_dfp_"], :root ad-slot, :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://ak.psaltauw.net/"], :root broadstreet-zone-container, :root a[href^="https://www.highperformancecpmgate.com/"], :root amp-ad, :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://lnkxt.bannerator.com/"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root [href^="https://groorsoa.net/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href^="https://www.effectiveratecpm.com/"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://www.dql2clk.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="https://www.dating-finder.com/signup/?ai_d="], :root a[href^="https://explore-site.com/"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root [data-template-type="nativead"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://voluum.prom-xcams.com/"], :root a[href^="https://twinrdsyte.com/"], :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://syndicate.contentsserved.com/"], :root div[data-alias="300x250 Ad 1"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.ultravpn.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://track.adform.net/"], :root a[href^="https://torguard.net/aff.php"] > img, :root [data-identity="adhesive-ad"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://tatrck.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://click.candyoffers.com/"], :root a[href^="https://t.aslnk.link/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"], :root a[href^="https://t.ajump1.com/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root .gnt_em_vp_c[data-g-s="vp_dk"], :root div[data-ad-wrapper], :root a[href^="https://svb-analytics.trackerrr.com/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"] + .ob_source, :root a[href^="http://www.iyalc.com/"], :root a[href^="https://claring-loccelkin.com/"], :root a[href^="https://stardomcoit.com/"], :root a[href^="https://track.aftrk5.com/"], :root a[href^="https://slkmis.com/"], :root a[href^="https://myclick-2.com/"], :root a[href^="https://sexynearme.com/"], :root [data-ad-manager-id], :root a[href^="https://s.zlinkr.com/"], :root [href="https://adstub.net/gaza88/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://s.zlink7.com/"], :root a[href^="https://s.ma3ion.com/"], :root a[href^="https://s.eunow4u.com/"], :root a[href^="https://random-affiliate.atimaze.com/"], :root #kt_player > div[style$="display: block;"][style*="inset: 0px;"], :root [href$="/sexdating.php"], :root a[href^="https://quotationfirearmrevision.com/"], :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://www.dating-finder.com/?ai_d="], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root [href^="https://ap.octopuspop.com/click/"] > img, :root app-ad, :root a[href^="https://postback1win.com/"], :root a[href^="https://a.adtng.com/"], :root a[href^="https://playnano.online/offerwalls/?ref="], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://pb-track.com/"], :root a[href^="https://pb-front.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://streamate.com/landing/click/"], :root a[href^="https://upsups.click/"], :root a[href^="https://ndt5.net/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root [data-ad-name], :root a[href^="https://loboclick.com/"], :root a[href^="https://lead1.pl/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://snowdayonline.xyz/"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://join.bannedsextapes.com/track/"], :root a[href^="https://jaxofuna.com/"], :root a[href^="https://italarizege.xyz/"], :root a[href^="https://identicaldrench.com/"], :root ad-shield-ads, :root a[href^="https://hot-growngames.life/"], :root a[href^="https://helmethomicidal.com/"], :root display-ad-component, :root a[href^="https://golinks.work/"], :root a[href^="https://s.zlinkn.com/"], :root a[href^="https://go.xxxvjmp.com/"], :root a[href^="https://go.xxxjmp.com"], :root a[href^="https://zirdough.net/"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root [data-role="tile-ads-module"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://go.xlivrdr.com"], :root a[href^="https://ismlks.com/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://go.xlirdr.com"], :root [data-css-class="dfp-inarticle"], :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://lijavaxa.com/"], :root a[href^="https://go.goaserv.com/"], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root div[data-adunit], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://go.dmzjmp.com"], :root a[href^="https://www.bang.com/?aff="], :root #mgb-container > #mgb, :root a[href^="https://go.admjmp.com"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href^="https://datewhisper.life/"], :root a[href^="https://click.linksynergy.com/fs-bin/"] > img, :root a[href^="https://get-link.xyz/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://www.adskeeper.com"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://clicks.affstrack.com/"] > img, :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://dl-protect.net/"], :root a[href*=".foxqck.com/"], :root a[href^="https://ctosrd.com/"], :root a[href^="https://go.bushheel.com/"], :root a[href^="https://ctjdwm.com/"], :root [href="//sexcams.plus/"], :root a[href^="https://camfapr.com/landing/click/"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href*="&maxads="], :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="https://1betandgonow.com/"], :root a[href^="https://chaturbate.com/in/?"], :root a[href^="https://t.ajrkm1.com/"], :root a[href^="https://bongacams10.com/track?"], :root a[href*=".g2afse.com/"], :root a[href^="https://bodelen.com/"], :root a[href^="//hoodingluster.com/"], :root a[href^="https://black77854.com/"], :root a[href^="https://getmatchedlocally.com/"], :root app-advertisement, :root a[href^="https://rixofa.com/"], :root a[href^="https://best-experience-cool.com/"], :root [data-taboola-options], :root a[href^="https://believessway.com/"], :root a[href^="https://Click.ggpickaff.com/"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="http://revolvemockerycopper.com/"], :root a[href^="https://awptjmp.com/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="https://ausoafab.net/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root a[href^="https://aj1070.online/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href^="https://adultfriendfinder.com/go/"], :root a[href^="https://ads.planetwin365affiliate.com/"], :root a[href^="https://ads.leovegas.com/"], :root a[href^="https://go.xlvirdr.com"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://a.medfoodhome.com/"], :root a[href^="https://cam4com.go2cloud.org/"], :root .nya-slot[style], :root a[href^="https://a.bestcontentweb.top/"], :root atf-ad-slot, :root a[href^="https://a2.adform.net/"], :root a[href^="https://a.candyai.love/"], :root .banner-img > .pbl, :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root a[href^="https://1winpb.com/"], :root div[id^="optidigital-adslot"], :root [href^="https://wsup.ai/"], :root a[href^="https://123-stream.org/"], :root a[href^="https://in.rabbtrk.com/"], :root a[href^="http://www.h4trck.com/"], :root [href^="https://a.acebet.com/api/click?"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="http://partners.etoro.com/"], :root [href="https://chaturbate.jjgirls.com/"] > img, :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root amp-ad-custom, :root a[href^="http://trk.globwo.online/"], :root a[onclick^="window.location.replace('https://random-affiliate.atimaze.com/"], :root a[href^="https://bongacams2.com/track?"], :root a-ad, :root a[href^="https://offhandpump.com/"], :root a[href^="http://stickingrepute.com/"], :root #slashboxes > .deals-rail, :root div[aria-label="Ads"], :root [href^="http://mypillow.com/"] > img, :root a[href^="http://bongacams.com/track?"], :root a[href^="//startgaming.net/tienda/" i], :root a[href^="https://a.medfoodsafety.com/"], :root a[href^="//go.eabids.com/"], :root a[href^=" https://www.friendlyduck.com/AF_"], :root [data-cl-spot-id], :root a[href*="/jump/next.php?r="], :root a[href^="https://go.nordvpn.net/aff"] > img, :root .\[\&_\.gdprAdTransparencyCogWheelButton\]\:\!pjra-z-\[5\], :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root div[id^="lazyad-"], :root a[href^="http://com-1.pro/"], :root [href^="https://www.profitablegatecpm.com/"], :root a[href*=".cfm?domain="][href*="&fp="], :root a[href^="https://ab.advertiserurl.com/aff/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root [id^="section-ad-banner"], :root [id^="ad_slider"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://wmctjd.com/"], :root a[href*="//jjgirls.com/sex/Chaturbate"], :root [id^="ad-wrap-"], :root [href^="https://zone.gotrackier.com/"], :root a[href^="http://sarcasmadvisor.com/"], :root [href^="https://www.restoro.com/"], :root a[href^="https://track.totalav.com/"], :root a[href^="https://ctrdwm.com/"], :root [href^="https://www.targetingpartner.com/"], :root a[href^="https://join.virtuallust3d.com/"], :root .section-subheader > .section-hotel-prices-header, :root [href^="https://www.hostg.xyz/"] > img, :root a[href^="https://bngpt.com/"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="http://adultfriendfinder.com/go/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root div[id^="ad-position-"], :root a[href^="https://www.toprevenuegate.com/"], :root a[href^="https://bc.game/"], :root a[href^="http://join.brokestraightboys.com/track/"], :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root [href^="https://join.girlsoutwest.com/"], :root a[href^="https://activate-game.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root [data-wpas-zoneid], :root a[href^="https://track.aftrk3.com/"], :root [href^="https://join3.bannedsextapes.com"], :root div[data-adzone], :root div[id^="adngin-"], :root [data-rc-widget], :root span[data-ez-ph-id], :root [href^="https://track.aftrk1.com/"], :root [href^="https://join.playboyplus.com/track/"], :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root a[href^="https://trk.softonixs.xyz/"], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root [href^="https://rpwmct.com/"], :root [href^="https://wct.link/click?"], :root a[href^="https://t.acam.link/"], :root a[href^="https://go.strpjmp.com/"], :root [href^="https://url.totaladblock.com/"], :root a[href^="https://go.rmishe.com/"], :root [href^="https://ilovemyfreedoms.com/landing-"], :root [href="https://adstub.net/indo666/"], :root [href^="https://glersakr.com/"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [href^="https://charmingdatings.life/"], :root [data-id^="div-gpt-ad"], :root a[href^="https://tracker.loropartners.com/"], :root [href^="https://awbbjmp.com/"], :root a[href^="https://www.friendlyduck.com/AF_"], :root [href^="https://ad1.adfarm1.adition.com/"], :root a[href^="https://t.ajrkm3.com/"], :root [href^="https://aads.com/campaigns/"], :root a[href^="https://fc.lc/ref/"], :root a[href^="https://go.bbrdbr.com"], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="https://s.zlink3.com/"], :root a[href^="http://sneakyadministration.com/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root a[href^="https://bngprm.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root [href^="http://www.mypillow.com/"] > img, :root .ob_container .item-container-obpd, :root [id^="div-gpt-ad"], :root [href="https://jdrucker.com/gold"] > img, :root a[href^="https://join.virtualtaboo.com/track/"], :root [id^="ad_sky"], :root [name^="google_ads_iframe"], :root aside[id^="adrotate_widgets-"], :root a[href^="https://www.liquidfire.mobi/"], :root DFP-AD, :root .grid > .container > #aside-promotion, :root [data-type="ad-vertical"], :root [href^="https://go.xlrdr.com"], :root a[href^="https://s.cant3am.com/"], :root [data-testid^="taboola-"], :root [data-testid^="section-AdRowBillboard"], :root a[href^="https://track.1234sd123.com/"], :root zeus-ad, :root [data-testid="prism-ad-wrapper"], :root [href^="https://ad.admitad.com/"], :root [href^="https://mypillow.com/"] > img, :root [data-testid="ad_testID"], :root [data-mobile-ad-id], :root [data-dynamic-ads], :root a[href^="https://gamingadlt.com/?offer="], :root [data-desktop-ad-id], :root a[href^="https://go.rmhfrtnd.com"], :root a[href^="https://pb-imc.com/"], :root a[href^="https://www8.smartadserver.com/"], :root topadblock, :root a[href^="//s.zlinkd.com/"], :root [href^="https://mypatriotsupply.com/"] > img, :root [data-testid="adBanner-wrapper"], :root [href^="https://mylead.global/stl/"] > img, :root a[href*=".adsrv.eacdn.com/"], :root [href^="https://antiagingbed.com/discount/"] > img, :root #teaser1[style^="width:autopx;"], :root [href^="https://www.cloudways.com/en/?id"], :root [data-asg-ins], :root [data-block-type="ad"], :root [data-ad-width], :root a[href^="https://clickins.slixa.com/"], :root [onclick*="content.ad/"], :root a[href^="https://go.cmtaffiliates.com/"], :root [href^="https://optimizedelite.com/"] > img, :root div[data-ad-region], :root AMP-AD, :root [data-ad-cls], :root a[href^="https://www.adxsrve.com/"], :root a[href^="https://click.Ggpickaff.com/"], :root [data-ez-name], :root a[href^="https://go.mnaspm.com/"], :root a[href^="https://service.bv-aff-trx.com/"], :root a[href^="https://6-partner.com/"], :root [class^="s2nPlayer"], :root [href^="https://affiliate.fastcomet.com/"] > img, :root [class^="adDisplay-module"], :root a[href^="https://adclick.g.doubleclick.net/"], :root [data-freestar-ad][id], :root AD-SLOT, :root a[href^="https://combodef.com/"], :root a[href^="https://click.hoolig.app/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"] > img, :root [data-ad-module], :root a[href^="https://a.bestcontentfood.top/"], :root #kt_player > a[target="_blank"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root #teaser2[style^="width:autopx;"], :root [data-revive-zoneid], :root a[href^="https://losingoldfry.com/"], :root div[id^="div-gpt-"], :root a[href^="https://gml-grp.com/"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root div[data-ad-targeting], :root a[style="width:100%;height:100%;z-index:10000000000000000;position:absolute;top:0;left:0;"], :root [href^="https://www.avantlink.com/click.php"] img, :root [data-testid="commercial-label-taboola"], :root [class^="div-gpt-ad"], :root a[href^="https://traffdaq.com/"], :root #teaser3[style^="width:autopx;"], :root a[href^="https://go.hpyjmp.com"], :root iframe[scrolling="no"][sandbox*="allow-popups allow-modals"][style^="width: 100%; height: 100%; border: none;"], :root [href^="https://mystore.com/"] > img, :root [class^="amp-ad-"], :root a[href^="https://clixtrac.com/"], :root a[href^="https://wittered-mainging.com/"], :root #teaser3[style="width: 100%;text-align: center;display: scroll;position:fixed;bottom: 0;margin: 0 auto;z-index: 103;"] { display: none !important; }</style></head>
+<body cz-shortcut-listen="true">
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<nav data-testid="navbar">
+  <div class="container nav-inner">
+    <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#hero" class="nav-logo" data-testid="nav-logo">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+        <rect x="3" y="16" width="5" height="9" rx="2" fill="#10b981"></rect>
+        <rect x="11" y="10" width="5" height="15" rx="2" fill="#10b981" opacity="0.8"></rect>
+        <rect x="19" y="4" width="5" height="21" rx="2" fill="#10b981" opacity="0.6"></rect>
+      </svg>
+      <span>VTS Finance</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#hero" data-testid="nav-inicio">Início</a></li>
+      <li><a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#como-funciona" data-testid="nav-como">Como funciona</a></li>
+      <li><a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#features" data-testid="nav-features">Funcionalidades</a></li>
+      <li><a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#pricing" data-testid="nav-pricing">Planos</a></li>
+      <li><a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#faq" data-testid="nav-faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#pricing" class="nav-cta-btn" data-testid="nav-cta">Começar agora</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" data-testid="hamburger-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" data-testid="mobile-menu">
+    <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#hero">Início</a>
+    <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#como-funciona">Como funciona</a>
+    <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#features">Funcionalidades</a>
+    <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#pricing">Planos</a>
+    <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#faq">FAQ</a>
+    <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#pricing" class="mob-cta">Começar agora</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge fade-up visible">
+        <span class="dot"></span>
+        Gestão financeira inteligente
+      </div>
+      <h1 class="hero-h1 fade-up delay-1 visible">
+        Pare de perder dinheiro<br>
+        <span class="accent-text">sem perceber.</span>
+      </h1>
+      <p class="hero-sub fade-up delay-2 visible">
+        Veja exatamente pra onde vai cada real — sem planilhas, sem esforço, em segundos.
+      </p>
+      <div class="hero-actions fade-up delay-3 visible">
+        <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#pricing" class="btn-primary" data-testid="hero-cta-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          Começar agora
+        </a>
+        <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#pricing" class="btn-ghost" data-testid="hero-cta-secondary">Ver planos</a>
+      </div>
+      <div class="hero-trust fade-up delay-4 visible">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>1.000+ usuários controlando suas finanças</span>
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg>
+          <span>Simples e rápido</span>
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path></svg>
+          <span>Funciona no celular e computador</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PROBLEMA ═══════════════════════ -->
+<section id="problema" class="surface-bg">
+  <div class="container">
+    <div class="section-head fade-up visible">
+      <div class="section-tag">O problema</div>
+      <h2 class="section-title">Seu dinheiro não some.<br>Você só não está vendo.</h2>
+    </div>
+    <p class="problema-text fade-up delay-1 visible">
+      Pequenos gastos passam despercebidos todos os dias. Quando você percebe… o mês já acabou.
+    </p>
+    <ul class="problema-bullets">
+      <li class="problema-bullet fade-up delay-1 visible">
+        <div class="xicon">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <span>Você acha que tem mais do que realmente tem</span>
+      </li>
+      <li class="problema-bullet fade-up delay-2 visible">
+        <div class="xicon">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <span>Não lembra onde gastou</span>
+      </li>
+      <li class="problema-bullet fade-up delay-3 visible">
+        <div class="xicon">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <span>Sempre promete que no próximo mês vai ser diferente</span>
+      </li>
+    </ul>
+    <p class="problema-closing fade-up delay-4 visible">E o ciclo se repete.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ SOLUÇÃO (FEATURES) ═══════════════════════ -->
+<section id="features">
+  <div class="container">
+    <div class="section-head fade-up visible">
+      <div class="section-tag">A solução</div>
+      <h2 class="section-title">Agora você vê tudo.<br><span class="accent-text">Em um só lugar.</span></h2>
+      <p class="section-sub">O VTS Finance mostra exatamente o que está acontecendo com seu dinheiro em tempo real.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card fade-up visible" data-testid="feature-card-1">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect>
+          </svg>
+        </div>
+        <div class="feat-title">Veja tudo em um só lugar</div>
+        <p class="feat-desc">Sem planilha, sem bagunça. Todas as suas contas e gastos organizados em um painel limpo.</p>
+      </div>
+      <div class="feat-card fade-up delay-1 visible" data-testid="feature-card-2">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+        <div class="feat-title">Descubra pra onde seu dinheiro vai</div>
+        <p class="feat-desc">Veja em segundos em quais categorias você gasta mais — e onde pode economizar.</p>
+      </div>
+      <div class="feat-card fade-up delay-2 visible" data-testid="feature-card-3">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line><line x1="2" y1="20" x2="22" y2="20"></line>
+          </svg>
+        </div>
+        <div class="feat-title">Relatórios claros e rápidos</div>
+        <p class="feat-desc">Resumo mensal e anual sem esforço. Entenda sua evolução financeira com um olhar.</p>
+      </div>
+      <div class="feat-card fade-up delay-3 visible" data-testid="feature-card-4">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path>
+          </svg>
+        </div>
+        <div class="feat-title">Acesse de qualquer dispositivo</div>
+        <p class="feat-desc">Celular, tablet ou computador — seus dados sincronizados e seguros em qualquer tela.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ COMO FUNCIONA ═══════════════════════ -->
+<section id="como-funciona" class="surface-bg">
+  <div class="container">
+    <div class="section-head fade-up visible">
+      <div class="section-tag">Como funciona</div>
+      <h2 class="section-title">Em menos de 2 minutos<br><span class="accent-text">você já tem controle</span></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card fade-up visible">
+        <div class="step-num">1</div>
+        <div class="step-title">Coloque seu saldo inicial</div>
+        <p class="step-desc">Informe quanto você tem agora. Simples assim — nenhuma configuração complicada.</p>
+      </div>
+      <div class="step-card fade-up delay-1 visible">
+        <div class="step-num">2</div>
+        <div class="step-title">Registre seus gastos em segundos</div>
+        <p class="step-desc">Cada compra registrada na hora. Em menos de 10 segundos você já sabe onde foi o dinheiro.</p>
+      </div>
+      <div class="step-card fade-up delay-2 visible">
+        <div class="step-num">3</div>
+        <div class="step-title">Veja tudo organizado automaticamente</div>
+        <p class="step-desc">O app categoriza, organiza e apresenta seus dados de forma clara — sem você fazer nada.</p>
+      </div>
+    </div>
+    <p class="steps-extra fade-up delay-3 visible">Sem planilhas. Sem complicação.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PRODUTO ═══════════════════════ -->
+<section id="produto">
+  <div class="container">
+    <div class="produto-inner">
+      <!-- Mockup -->
+      <div class="fade-up visible">
+        <div class="mockup-wrapper">
+          <div class="mockup-card" data-testid="dashboard-mockup">
+            <div class="dash-header">
+              <div>
+                <div class="dash-title">Painel Financeiro</div>
+                <div class="dash-date">Fevereiro 2026</div>
+              </div>
+              <div class="dash-badge">+12,4%</div>
+            </div>
+            <div class="dash-balance">
+              <div class="dash-balance-label">Saldo disponível</div>
+              <div class="dash-balance-val">R$ 12.847<span style="font-size:1rem;color:var(--text-muted)">,50</span></div>
+              <div class="dash-balance-change">▲ R$ 1.430 este mês</div>
+            </div>
+            <div class="dash-stats">
+              <div class="dash-stat">
+                <div class="dash-stat-label">Receitas</div>
+                <div class="dash-stat-val">R$ 6.200</div>
+                <div class="dash-stat-sub up">▲ 8%</div>
+              </div>
+              <div class="dash-stat">
+                <div class="dash-stat-label">Despesas</div>
+                <div class="dash-stat-val">R$ 4.770</div>
+                <div class="dash-stat-sub down">▼ 3%</div>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <div class="dash-chart-label">Últimos 7 meses</div>
+              <div class="chart-bars">
+                <div class="chart-bar"><div class="fill" style="height:45%"></div></div>
+                <div class="chart-bar"><div class="fill" style="height:62%"></div></div>
+                <div class="chart-bar"><div class="fill" style="height:55%"></div></div>
+                <div class="chart-bar"><div class="fill" style="height:78%"></div></div>
+                <div class="chart-bar"><div class="fill" style="height:68%"></div></div>
+                <div class="chart-bar"><div class="fill" style="height:85%"></div></div>
+                <div class="chart-bar" style="background:rgba(16,185,129,0.35)"><div class="fill" style="height:100%"></div></div>
+              </div>
+            </div>
+            <div class="dash-cats">
+              <div class="dash-cat">
+                <span class="dash-cat-name">Moradia</span>
+                <div class="dash-cat-bar-wrap"><div class="dash-cat-bar" style="width:72%"></div></div>
+                <span class="dash-cat-val">R$ 1.800</span>
+              </div>
+              <div class="dash-cat">
+                <span class="dash-cat-name">Alimentação</span>
+                <div class="dash-cat-bar-wrap"><div class="dash-cat-bar" style="width:48%"></div></div>
+                <span class="dash-cat-val">R$ 1.200</span>
+              </div>
+              <div class="dash-cat">
+                <span class="dash-cat-name">Transporte</span>
+                <div class="dash-cat-bar-wrap"><div class="dash-cat-bar" style="width:30%"></div></div>
+                <span class="dash-cat-val">R$ 750</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Content -->
+      <div class="produto-content fade-up delay-1 visible">
+        <div class="section-tag">Produto</div>
+        <h2>Veja seu dinheiro como<br><span class="accent-text">nunca viu antes</span></h2>
+        <ul class="produto-bullets">
+          <li class="produto-bullet">
+            <div class="check-circle">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            Saldo atualizado em tempo real
+          </li>
+          <li class="produto-bullet">
+            <div class="check-circle">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            Gastos por categoria
+          </li>
+          <li class="produto-bullet">
+            <div class="check-circle">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            Histórico completo
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TRANSFORMAÇÃO ═══════════════════════ -->
+<section id="transformacao" class="surface-bg">
+  <div class="container">
+    <div class="section-head fade-up visible">
+      <div class="section-tag">Transformação</div>
+      <h2 class="section-title">De confusão → <span class="accent-text">controle total</span></h2>
+    </div>
+    <div class="transform-wrapper fade-up delay-1 visible">
+      <!-- Before -->
+      <div class="transform-col before">
+        <div class="transform-label"><span class="label-dot"></span>Antes</div>
+        <ul class="transform-items">
+          <li class="transform-item"><span class="ti-dot"></span>Dinheiro sumindo</li>
+          <li class="transform-item"><span class="ti-dot"></span>Ansiedade no fim do mês</li>
+          <li class="transform-item"><span class="ti-dot"></span>Falta de clareza</li>
+        </ul>
+      </div>
+      <!-- Arrow -->
+      <div class="transform-arrow">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </div>
+      <!-- After -->
+      <div class="transform-col after">
+        <div class="transform-label"><span class="label-dot"></span>Depois</div>
+        <ul class="transform-items">
+          <li class="transform-item"><span class="ti-dot"></span>Controle total</li>
+          <li class="transform-item"><span class="ti-dot"></span>Decisões conscientes</li>
+          <li class="transform-item"><span class="ti-dot"></span>Tranquilidade financeira</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PLANOS ═══════════════════════ -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head fade-up visible">
+      <div class="section-tag">Planos</div>
+      <h2 class="section-title">Escolha o plano <span class="accent-text">ideal para você</span></h2>
+      <p class="section-sub">Preços transparentes, sem taxas ocultas. Cancele quando quiser.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <!-- Mensal -->
+      <div class="price-card fade-up visible" data-testid="pricing-card-mensal">
+        <div class="price-tier">Mensal</div>
+        <div class="price-tagline">Perfeito pra começar</div>
+        <div class="price-amount"><sup>R$</sup>9<span style="font-size:1.2rem">,99</span></div>
+        <div class="price-period">por mês</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Dashboard completo</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Controle de gastos</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Relatórios mensais</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Dados seguros na nuvem</li>
+        </ul>
+        <a href="https://pay.kiwify.com.br/KRpO7be" target="_blank" rel="noopener" class="btn-outline" data-testid="pricing-cta-mensal">Assinar agora</a>
+      </div>
+
+      <!-- Anual -->
+      <div class="price-card popular fade-up delay-1 visible" data-testid="pricing-card-anual">
+        <div class="popular-badge">Mais popular</div>
+        <div class="price-tier">Anual</div>
+        <div class="price-tagline">Economize no longo prazo</div>
+        <div class="price-amount"><sup>R$</sup>99<span style="font-size:1.2rem">,99</span></div>
+        <div class="price-period">por ano — <strong style="color:var(--accent)">economize 17%</strong></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Tudo do plano Mensal</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Relatórios mensais e anuais</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Suporte prioritário</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Acesso antecipado a novidades</li>
+        </ul>
+        <a href="https://pay.kiwify.com.br/hs3uc9Z" target="_blank" rel="noopener" class="btn-solid" data-testid="pricing-cta-anual">Assinar agora</a>
+      </div>
+
+      <!-- 4 Anos -->
+      <div class="price-card fade-up delay-2 visible" data-testid="pricing-card-4anos">
+        <div class="price-tier">4 Anos</div>
+        <div class="price-tagline">Melhor custo-benefício</div>
+        <div class="price-amount"><sup>R$</sup>299<span style="font-size:1.2rem">,99</span></div>
+        <div class="price-period">acesso por 4 anos</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Tudo do plano Anual</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Exportação avançada</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Backup automático</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Economia máxima</li>
+        </ul>
+        <a href="https://pay.kiwify.com.br/tJKTirV" target="_blank" rel="noopener" class="btn-outline" data-testid="pricing-cta-4anos">Assinar agora</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ OBJEÇÕES ═══════════════════════ -->
+<section id="objecoes" class="surface-bg">
+  <div class="container">
+    <div class="section-head fade-up visible">
+      <div class="section-tag">Sem desculpas</div>
+      <h2 class="section-title">E se não funcionar <span class="accent-text">pra mim?</span></h2>
+    </div>
+    <div class="objecoes-grid">
+      <div class="objecao-card fade-up visible">
+        <div class="objecao-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="objecao-text">Você pode cancelar quando quiser</p>
+      </div>
+      <div class="objecao-card fade-up delay-1 visible">
+        <div class="objecao-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="objecao-text">Interface simples para qualquer pessoa</p>
+      </div>
+      <div class="objecao-card fade-up delay-2 visible">
+        <div class="objecao-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="objecao-text">Comece em menos de 2 minutos</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CTA FINAL ═══════════════════════ -->
+<section id="cta-final">
+  <div class="container">
+    <div class="cta-final-inner">
+      <div class="section-tag fade-up visible" style="margin-bottom:20px;">Sua decisão</div>
+      <h2 class="cta-final-title fade-up delay-1 visible">
+        Você pode continuar no mesmo ciclo…<br>
+        <span class="accent-text">ou mudar agora.</span>
+      </h2>
+      <p class="cta-final-sub fade-up delay-2 visible">
+        Comece hoje e pare de perder dinheiro sem perceber.
+      </p>
+      <div class="fade-up delay-3 visible">
+        <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#pricing" class="btn-primary" data-testid="cta-final-btn" style="font-size:1.05rem; padding: 17px 40px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          Quero ter controle agora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<section id="faq" class="surface-bg">
+  <div class="container">
+    <div class="section-head fade-up visible">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Perguntas <span class="accent-text">frequentes</span></h2>
+    </div>
+    <div class="faq-list" data-testid="faq-list">
+
+      <div class="faq-item fade-up visible" data-testid="faq-item-1">
+        <button class="faq-toggle" data-testid="faq-toggle-1" aria-expanded="false">
+          <span>Funciona no celular?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-1">
+          <div class="faq-answer-inner">Sim. Você pode usar no celular, tablet ou computador.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up delay-1 visible" data-testid="faq-item-2">
+        <button class="faq-toggle" data-testid="faq-toggle-2" aria-expanded="false">
+          <span>Preciso entender de finanças?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-2">
+          <div class="faq-answer-inner">Não. O app foi feito pra ser simples — você só registra e ele organiza tudo.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up delay-2 visible" data-testid="faq-item-3">
+        <button class="faq-toggle" data-testid="faq-toggle-3" aria-expanded="false">
+          <span>Quanto tempo leva pra começar?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-3">
+          <div class="faq-answer-inner">Menos de 2 minutos. Você coloca seu saldo inicial e já pode usar.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up delay-3 visible" data-testid="faq-item-4">
+        <button class="faq-toggle" data-testid="faq-toggle-4" aria-expanded="false">
+          <span>E se eu esquecer de registrar gastos?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-4">
+          <div class="faq-answer-inner">Sem problema. Você pode adicionar depois — o importante é começar.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up delay-4 visible" data-testid="faq-item-5">
+        <button class="faq-toggle" data-testid="faq-toggle-5" aria-expanded="false">
+          <span>Isso realmente ajuda ou é só mais um app?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-5">
+          <div class="faq-answer-inner">Aqui você vê exatamente pra onde seu dinheiro está indo. Sem isso, você continua no mesmo ciclo.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up visible" data-testid="faq-item-6">
+        <button class="faq-toggle" data-testid="faq-toggle-6" aria-expanded="false">
+          <span>Meus dados estão seguros?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-6">
+          <div class="faq-answer-inner">Sim. Seus dados são protegidos e armazenados com segurança.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up delay-1 visible" data-testid="faq-item-7">
+        <button class="faq-toggle" data-testid="faq-toggle-7" aria-expanded="false">
+          <span>Posso cancelar quando quiser?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-7">
+          <div class="faq-answer-inner">Sim. Você pode cancelar a qualquer momento.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up delay-2 visible" data-testid="faq-item-8">
+        <button class="faq-toggle" data-testid="faq-toggle-8" aria-expanded="false">
+          <span>Vale a pena pagar por isso?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-8">
+          <div class="faq-answer-inner">Se você já perdeu dinheiro sem saber onde gastou, o app se paga evitando gastos invisíveis.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up delay-3 visible active" data-testid="faq-item-9">
+        <button class="faq-toggle" data-testid="faq-toggle-9" aria-expanded="true">
+          <span>Qual plano escolher?</span>
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+        </button>
+        <div class="faq-answer" data-testid="faq-answer-9">
+          <div class="faq-answer-inner">Mensal para testar, anual para economizar, e 4 anos para o melhor custo-benefício.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer data-testid="footer">
+  <div class="container footer-inner">
+    <a href="https://emerald-fintech-hub.preview.emergentagent.com/vts-finance.html#hero" class="footer-logo" data-testid="footer-logo">
+      <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+        <rect x="3" y="16" width="5" height="9" rx="2" fill="#10b981"></rect>
+        <rect x="11" y="10" width="5" height="15" rx="2" fill="#10b981" opacity="0.8"></rect>
+        <rect x="19" y="4" width="5" height="21" rx="2" fill="#10b981" opacity="0.6"></rect>
+      </svg>
+      <span>VTS Finance</span>
+    </a>
+    <p class="footer-copy" data-testid="footer-copy">© 2026 VTS Finance. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════ JS ═══════════════════════ -->
+<script>
+  // ── Hamburger ──
+  var hamburgerBtn = document.getElementById('hamburgerBtn');
+  var mobileMenu   = document.getElementById('mobileMenu');
+
+  hamburgerBtn.addEventListener('click', function () {
+    this.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      hamburgerBtn.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  // ── FAQ Accordion ──
+  document.querySelectorAll('.faq-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item     = this.closest('.faq-item');
+      var isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function (i) {
+        i.classList.remove('active');
+        i.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ── Fade-in on scroll ──
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  // ── Smooth scroll ──
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      var target = document.querySelector(targetId);
+      if (!target) return;
+      e.preventDefault();
+      var navH      = document.querySelector('nav').offsetHeight;
+      var targetTop = target.getBoundingClientRect().top + window.pageYOffset - navH - 12;
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+    });
+  });
+</script>
+<script defer="" src="./index_files/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f1164708f7295fc',t:'MTc3Njk5NDc0Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./index_files/saved_resource.html"></iframe>
+
+</body></html>
